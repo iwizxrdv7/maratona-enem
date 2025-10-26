@@ -34,7 +34,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex items-center gap-2 border-2 border-gray-300 rounded-full px-6 py-3">
                                     <img src="https://ext.same-assets.com/3858286225/238481265.svg" alt="" className="w-6 h-6" />
-                                    <span className="text-sm font-medium">100% Gratuito</span>
+                                    <span className="text-sm font-medium">100% de aprovação</span>
                                 </div>
                             </div>
 
