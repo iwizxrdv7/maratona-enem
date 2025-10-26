@@ -1,3 +1,18 @@
+const eventHighlights = [
+    {
+        icon: "https://ext.same-assets.com/3858286225/671927242.svg",
+        label: "5, 6, 7, 13 e 14 de Novembro, às 19h",
+    },
+    {
+        icon: "https://ext.same-assets.com/3858286225/3495032678.svg",
+        label: "Ao vivo",
+    },
+    {
+        icon: "https://ext.same-assets.com/3858286225/238481265.svg",
+        label: "100% de aprovação",
+    },
+];
+
 export default function Home() {
     return (
         <div className="min-h-screen bg-white">
@@ -24,18 +39,15 @@ export default function Home() {
                             />
 
                             <div className="flex flex-wrap gap-4 mb-8">
-                                <div className="flex items-center gap-2 border-2 border-gray-300 rounded-full px-6 py-3">
-                                    <img src="https://ext.same-assets.com/3858286225/671927242.svg" alt="" className="w-6 h-6" />
-                                    <span className="text-sm font-medium">5, 6, 7, 13 e 14 de Novembro, às 19h</span>
-                                </div>
-                                <div className="flex items-center gap-2 border-2 border-gray-300 rounded-full px-6 py-3">
-                                    <img src="https://ext.same-assets.com/3858286225/3495032678.svg" alt="" className="w-6 h-6" />
-                                    <span className="text-sm font-medium">Ao vivo</span>
-                                </div>
-                                <div className="flex items-center gap-2 border-2 border-gray-300 rounded-full px-6 py-3">
-                                    <img src="https://ext.same-assets.com/3858286225/238481265.svg" alt="" className="w-6 h-6" />
-                                    <span className="text-sm font-medium">100% de aprovação</span>
-                                </div>
+                                {eventHighlights.map((highlight) => (
+                                    <div
+                                        key={highlight.label}
+                                        className="flex items-center gap-2 border-2 border-gray-300 rounded-full px-6 py-3"
+                                    >
+                                        <img src={highlight.icon} alt="" className="w-6 h-6" />
+                                        <span className="text-sm font-medium">{highlight.label}</span>
+                                    </div>
+                                ))}
                             </div>
 
                             <h1 className="text-4xl lg:text-5xl font-black mb-6 text-gray-900 leading-tight">
